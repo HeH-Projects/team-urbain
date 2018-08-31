@@ -1,0 +1,19 @@
+language: java
+
+notifications:
+  email: false
+
+branches:
+  only:
+  - develop
+  - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: aVNMWHxEwmb84oyyeAwCLTdD13U2ambrkQx5vQeLuYdZ/JemAjeFcCIeE16lCsm0sIhXYMUQbVjPslIHKi0oqTPneEF8uCMuWeOdMRRdbNgfNW8P3Rg1aJVxq5Ld+SJf0mUeqr3k9pnLjYcUgVgZFhnFHI5RWiHbVC+CqENsXfKouTY90cM113lNbABpN3/er0kfqbmzTElfNDGKWSaObn+/RCfAU6eG7JS/HxjXQPdFSpOrmmIDndCzYn2ZvXl0Y+kFKvw4umRs1xa1eKw+U1hYagCz6lZX4NDeu32KvlagdyY28bEhxzdQvLhGY1ns4AGEEJI/wtL1tij0wgsVK36NLp6CeMdL0UYywgOZMsFRWINlWddQMtgFthf5OP17w542jm+s4e8dSFlTqVTVFd6KO3uKN1l/iya5oIAzmw78kDqZz1MHk96woVz9I09Chn/F5+mdDuQKGP//A2WmVwfzLEFPQJDpLMXFSk1A7tpErnJGctgXz9YdpZoly3QfhGZQkrT3AN6LWDns6tCPKcXKdjMBM7StFHFJRP3mIXwoQzG7Xj0PtlvBrWgADnVhEMrW/m/CxFgWh9LGL1RH8OptZlpJzA42DazzCMIa1KeIPYDYR6VAPLw5ZFaw3P+OK+2y45EK+5cT+SchIU1STudkrOZt9xeeNb9ozKHcoPA=
+  app: doggotest
+  on:
+    branch:
+      - develop
+      - master
