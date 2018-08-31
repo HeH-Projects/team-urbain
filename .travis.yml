@@ -1,0 +1,15 @@
+language: java
+
+notifications:
+  email: false
+
+branches:
+  only:
+  - develop
+  - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: RN+bJ20x8OGCH8YZNMh7nmkmlSJEvE0eQTbNwtY7fefiqWfi/3hpcJJdUxqE0FpfJyNs+HiaKlYjJjdlBe8L/Jqh/KtAyX36hJ2ODLD0Wp3lzDGk61IyxocRX/5hjrX+R8SqYHJDK4KV8DH9S5PyR9W4DUBo/AKHFDheTQhZ1cyAJWBimzO6GwbEQm5CaCR31GCCaGtGAln0dTL3by7BNJk/ws7DgXiJkUdGTNkqcXfWt5Ee6eu0GpC9mlGVGZO2twe86enREr1Ll3Cdu+2JXPdCIhivegyntbKHqcr42peE4Q+BmEV07b1FEjz7lqWy87U+iLW8+UF78I+8MQeunKlyFnJH/4uUHTvV0POEO1Zhl1Z9I7WamX24fVNXea1VQQ3Kml922wUqcfGDuak2MCumg2yzaVuUsWX8WgIcEOFBoCClfxttxCv1cCYjx0r8XLhsGGYU7tU+5kyIarLj63I0WdJ9J17JwhvzKdWovE2TrrdabFq+iWd6a/YED8xkACAKXK83GnNl3sn489etL/r4HP2WusakO+A91ZhCKDHSJAEMWqTMuX9426gGrMX/jdqB4J18n/A7UdhPsx15l0T5WZtYFGc94M7X5xR9mPm6Qk0QZR2HTr7wDtQtJsBgCndqJUVQczpbAhCCxWF3Hh0yINTckqEoPTi/cGMTaH4=
+  app: DoggoCare
