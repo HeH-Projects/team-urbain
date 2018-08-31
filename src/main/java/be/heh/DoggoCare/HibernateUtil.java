@@ -1,4 +1,4 @@
-package be.heh.DoggoCare;
+/**package be.heh.DoggoCare;
 
 import java.lang.NullPointerException;
 import javax.persistence.EntityManagerFactory;
@@ -22,7 +22,6 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-}
-
+}*/
 
 
