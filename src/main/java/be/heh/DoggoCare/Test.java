@@ -9,4 +9,10 @@ public class Test {
     public String index() {
         return "Message de réussite !";
     }
+
+    @RequestMapping("/test")
+    public String testing() {
+        return "Message de test !";
+    }
+
 }
