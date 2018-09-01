@@ -1,27 +1,21 @@
-/**package be.heh.DoggoCare;
+package be.heh.DoggoCare;
 
-import java.lang.NullPointerException;
-import javax.persistence.EntityManagerFactory;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
-@Configuration
 public class HibernateUtil {
+    private static SessionFactory sessionFactory = null;
 
-    @Autowired
-    private EntityManagerFactory entityManagerFactory;
-
-    @Bean(destroyMethod="")
-    public SessionFactory getSessionFactory() {
-        SessionFactory sessionFactory = entityManagerFactory.unwrap(SessionFactory.class);
-        if (sessionFactory == null) {
-            throw new NullPointerException("Factory␣is␣not␣a␣hibernate␣factory.");
-        }
-        return sessionFactory;
+    static {
+        Configuration cfg = new Configuration().configure();
+        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties());
+        sessionFactory = cfg.buildSessionFactory(builder.build());
     }
 
-}*/
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+}
 
 
