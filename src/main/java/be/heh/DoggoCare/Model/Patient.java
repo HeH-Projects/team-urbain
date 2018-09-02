@@ -17,8 +17,8 @@ public class Patient {
     private String name;
     @NotNull
     private String dogBreed;
-    private String size;
-    private String weight;
+    private double size;
+    private double weight;
     private int age;
     private String description;
 
@@ -42,19 +42,19 @@ public class Patient {
         this.dogBreed = dogBreed;
     }
 
-    public String getSize() {
+    public double getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(double size) {
         this.size = size;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
