@@ -1,9 +1,6 @@
 package be.heh.DoggoCare.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
@@ -19,11 +16,16 @@ public class Appointment {
     @NotNull
     private String hour;
 
-
+    @ManyToOne
     private Patient patient;
+    @ManyToOne
     private Customer customer;
+    @ManyToOne
     private Veterinarian veterinarian;
+    @ManyToOne
     private Care care;
+    @ManyToOne
+    private Room room;
 
     public Appointment() {
     }
@@ -74,5 +76,13 @@ public class Appointment {
 
     public void setCare(Care care) {
         this.care = care;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 }

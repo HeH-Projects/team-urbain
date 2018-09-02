@@ -1,10 +1,8 @@
 package be.heh.DoggoCare.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Entity
 public class Veterinarian {
@@ -22,7 +20,8 @@ public class Veterinarian {
     @NotNull
     private String phone;
 
-    private Appointment appointment;
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="veterinarian")
+    private Set<Appointment> appointments;
 
     public Veterinarian() {
     }
@@ -59,11 +58,11 @@ public class Veterinarian {
         this.phone = phone;
     }
 
-    public Appointment getAppointment() {
-        return appointment;
+    public Set<Appointment> getAppointments() {
+        return appointments;
     }
 
-    public void setAppointment(Appointment appointment) {
-        this.appointment = appointment;
+    public void setAppointments(Set<Appointment> appointments) {
+        this.appointments = appointments;
     }
 }

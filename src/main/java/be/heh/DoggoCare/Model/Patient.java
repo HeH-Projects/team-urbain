@@ -1,10 +1,8 @@
 package be.heh.DoggoCare.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Entity
 public class Patient {
@@ -21,6 +19,11 @@ public class Patient {
     private double weight;
     private int age;
     private String description;
+
+    @ManyToOne
+    private Customer customer;
+    @OneToMany(fetch=FetchType.LAZY, mappedBy="patient")
+    private Set<Appointment> appointments;
 
     public Patient(){
 
@@ -72,5 +75,21 @@ public class Patient {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Set<Appointment> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(Set<Appointment> appointments) {
+        this.appointments = appointments;
     }
 }
