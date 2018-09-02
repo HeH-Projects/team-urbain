@@ -16,6 +16,6 @@ Ce projet a aussi été développé en respectant la méthode SCRUM.
 ## Contributeurs
 
 - [Guillaume Isembaert](https://github.com/Loukourou)
-- [Thibault Stevanoni ] (https://github.com/thib050697)
+- [Thibault Stevanoni] (https://github.com/thib050697)
 - [Thomas Rosi](https://github.com/ThomasRosi)
 - [Arnaud Urbain](https://github.com/Dexnaw)
