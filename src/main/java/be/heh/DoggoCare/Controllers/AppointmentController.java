@@ -28,11 +28,31 @@ public class AppointmentController {
     }
 
     @PostMapping(value = "/add")
-    public Appointment addAppointment(@RequestBody Appointment appointment){
+    public Appointment create(@RequestBody Appointment appointment){
         appointmentRepository.save(new Appointment(appointment.getDate(),appointment.getHour(),
                 appointment.getPatient(),appointment.getCustomer(),appointment.getVeterinarian(),
                 appointment.getCare(),appointment.getRoom()));
         return appointment;
+    }
+
+    @PostMapping(value = "/update/{id}")
+    public Appointment update(@RequestBody Appointment appointment, @PathVariable Long id){
+        Appointment appointmentToUpdate = appointmentRepository.getOne(id);
+
+        appointmentToUpdate.setDate(appointment.getDate());
+        appointmentToUpdate.setHour(appointment.getHour());
+        appointmentToUpdate.setPatient(appointment.getPatient());
+        appointmentToUpdate.setCustomer(appointment.getCustomer());
+        appointmentToUpdate.setVeterinarian(appointment.getVeterinarian());
+        appointmentToUpdate.setCare(appointment.getCare());
+        appointmentToUpdate.setRoom(appointment.getRoom());
+
+        return appointmentRepository.save(appointmentToUpdate);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public void deleteAppointment(@PathVariable Long id){
+        appointmentRepository.delete(appointmentRepository.getOne(id));
     }
 
 }
