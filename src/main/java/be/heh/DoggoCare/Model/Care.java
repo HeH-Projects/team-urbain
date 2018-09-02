@@ -20,6 +20,11 @@ public class Care {
     public Care() {
     }
 
+    public Care(String name, double cost) {
+        this.name = name;
+        this.cost = cost;
+    }
+
     public String getName() {
         return name;
     }
