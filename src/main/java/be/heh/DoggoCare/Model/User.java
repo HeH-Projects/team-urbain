@@ -26,6 +26,13 @@ public class User {
 
     }
 
+    public User(@NotNull String firstName, @NotNull String lastName, @NotNull String mail, @NotNull String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mail = mail;
+        this.password = password;
+    }
+
     public String getFirstName() {
         return firstName;
     }
