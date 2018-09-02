@@ -53,4 +53,9 @@ public class UserController {
     public List<User> getUserByLastName(@PathVariable String lastName){
         return userRepositoy.findByLastName(lastName);
     }
+
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public User getUserById(@PathVariable Long id){
+        return userRepositoy.getOne(id);
+    }
 }
