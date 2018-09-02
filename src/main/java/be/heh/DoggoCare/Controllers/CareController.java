@@ -28,7 +28,7 @@ public class CareController {
 
     @PostMapping(value = "/add")
     public Care create(@RequestBody Care care){
-        return careRepository.save(new Care(care.getName(), care.getCost()));
+        return careRepository.save(new Care(care.getName(), care.getCost(), care.getDuration()));
     }
 
     @PostMapping(value = "/update/{id}")

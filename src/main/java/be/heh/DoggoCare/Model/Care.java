@@ -16,13 +16,15 @@ public class Care {
     @NotNull
     private String name;
     private double cost;
+    private int duration;
 
     public Care() {
     }
 
-    public Care(String name, double cost) {
+    public Care(String name, double cost, int duration) {
         this.name = name;
         this.cost = cost;
+        this.duration=duration;
     }
 
     public String getName() {
@@ -39,5 +41,13 @@ public class Care {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
