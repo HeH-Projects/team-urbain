@@ -29,6 +29,17 @@ public class Appointment {
 
     public Appointment() {
     }
+    public Appointment(LocalDate date, String hour, Patient patient,
+                       Customer customer, Veterinarian veterinarian,
+                       Care care, Room room) {
+        this.date = date;
+        this.hour = hour;
+        this.patient = patient;
+        this.customer = customer;
+        this.veterinarian = veterinarian;
+        this.care = care;
+        this.room = room;
+    }
 
     public LocalDate getDate() {
         return date;
