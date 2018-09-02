@@ -17,7 +17,11 @@ public class Care {
     private String name;
     private double cost;
     private int duration;
-
+    /*
+        Visite de routine (45 min)
+        Pédicure (30 min)
+        Soin, toilettage (60 min)
+    */
     public Care() {
     }
 
