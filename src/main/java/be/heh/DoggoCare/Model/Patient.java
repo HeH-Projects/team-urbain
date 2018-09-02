@@ -29,6 +29,17 @@ public class Patient {
 
     }
 
+    public Patient(String name, String dogBreed, double size, double weight,
+                   int age, String description, Customer customer) {
+        this.name = name;
+        this.dogBreed = dogBreed;
+        this.size = size;
+        this.weight = weight;
+        this.age = age;
+        this.description = description;
+        this.customer = customer;
+    }
+
     public String getName() {
         return name;
     }
