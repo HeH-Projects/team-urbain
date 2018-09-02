@@ -49,9 +49,8 @@ public class UserController {
         userRepositoy.delete(userRepositoy.getOne(id));
     }
 
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<User> getUserByLastName(@PathVariable Long id){
-        List<User> users = userRepositoy.findByLastName(userRepositoy.getOne(id).getLastName());
-        return users;
+    @GetMapping(value = "/{lastName}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<User> getUserByLastName(@PathVariable String lastName){
+        return userRepositoy.findByLastName(lastName);
     }
 }
