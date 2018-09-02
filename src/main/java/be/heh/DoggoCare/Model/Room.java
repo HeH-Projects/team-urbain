@@ -20,6 +20,10 @@ public class Room {
     public Room() {
     }
 
+    public Room(@NotNull String name) {
+        this.name = name;
+    }
+
     public Set<Appointment> getAppointments() {
         return appointments;
     }
