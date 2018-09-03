@@ -2,9 +2,11 @@ package be.heh.DoggoCare.Model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "care")
+@XmlRootElement
 public class Care {
 
     @Id

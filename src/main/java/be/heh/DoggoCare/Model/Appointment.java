@@ -2,10 +2,12 @@ package be.heh.DoggoCare.Model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "appointment")
+@XmlRootElement
 public class Appointment {
 
     @Id
