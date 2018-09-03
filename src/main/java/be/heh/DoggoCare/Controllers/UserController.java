@@ -18,6 +18,7 @@ public class UserController {
 
     @GetMapping(value="/", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> getAll(){
+
         List<User> list = new ArrayList<>();
 
         Iterable<User> users = userRepositoy.findAll();

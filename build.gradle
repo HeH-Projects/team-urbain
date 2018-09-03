@@ -31,6 +31,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-jdbc:1.2.7.RELEASE')
 	compile('org.hibernate:hibernate-core:5.2.11.Final')
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.0.1'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
 	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
