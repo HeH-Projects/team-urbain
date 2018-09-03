@@ -1,4 +1,4 @@
-<div class="body">
+<div>
   <header>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <a href="#" class="navbar-brand">{{title}}</a>
@@ -8,15 +8,19 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <a href="#" class="nav-item active nav-link">Home</a>
-          <a href="#" class="nav-item active nav-link">Login</a>
+          <a routerLink="/" class="nav-item active nav-link">Home</a>
+          <a routerLink="/login" class="nav-item active nav-link">Login</a>
         </ul>
       </div>
     </nav>
   </header>
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
   <footer>
     DoggoCare - Site créé dans le cadre du cours de Développement Web Avancé - BLOC 3 - Informatique et Système - HEH Mons
   </footer>
 </div>
+
 
 
