@@ -1,5 +1,12 @@
 webpackJsonp(["main"],{
 
+/***/ "../../../../../../resources/images/background.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "background.5b7deb051bcea9939ea6.jpg";
+
+/***/ }),
+
 /***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
@@ -20,12 +27,13 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".body {\r\n    background: url(" + escape(__webpack_require__("../../../../../../resources/images/background.jpg")) + ") no-repeat center fixed;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-size: cover;\r\n    color : #F5FBEF;\r\n}\r\n\r\nfooter {\r\n  padding: 20px;\r\n  text-align: center;\r\n  color : #000000;\r\n}\r\n", ""]);
 
 // exports
 
@@ -38,7 +46,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n"
+module.exports = "<div class=\"body\">\n  <header>\n    <nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n      <a href=\"#\" class=\"navbar-brand\">{{title}}</a>\n      <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n          <a href=\"#\" class=\"nav-item active nav-link\">Home</a>\n          <a href=\"#\" class=\"nav-item active nav-link\">Login</a>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <footer>\n    DoggoCare - Site créé dans le cadre du cours de Développement Web Avancé - BLOC 3 - Informatique et Système - HEH Mons\n  </footer>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -57,7 +65,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'app';
+        this.title = 'DoggoCare';
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({

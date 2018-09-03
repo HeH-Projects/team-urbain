@@ -1,0 +1,14 @@
+.body {
+    background: url("../../../resources/images/background.jpg") no-repeat center fixed;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color : #F5FBEF;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color : #000000;
+}
