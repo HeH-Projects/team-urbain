@@ -33,7 +33,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\r\n    background: url(" + escape(__webpack_require__("../../../../../../resources/images/background.jpg")) + ") no-repeat center fixed;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-size: cover;\r\n    color : #F5FBEF;\r\n    width: 100%;\r\n}\r\n\r\nfooter {\r\n  padding: 20px;\r\n  text-align: center;\r\n  color : #000000;\r\n}\r\n", ""]);
+exports.push([module.i, ".body {\r\n    background: url(" + escape(__webpack_require__("../../../../../../resources/images/background.jpg")) + ") no-repeat center fixed;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-size: cover;\r\n    color : #F5FBEF;\r\n    width: 100%;\r\n    min-height: 800px;\r\n}\r\n\r\nfooter {\r\n  padding: 10px;\r\n  text-align: center;\r\n  color : #ffffff;\r\n  border-bottom: solid;\r\n  border-bottom-color: #000000;\r\n  background-color: #343A40;\r\n}\r\n", ""]);
 
 // exports
 
@@ -144,7 +144,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".body {\r\n  color: #000000;\r\n  text-shadow: 0 0 4px #ffffff;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -157,7 +157,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <h3>A propos</h3>\n  <p>\n    Ce projet a été créé dans le cadre du cours de développement Web avancé - Bloc 3 Informatique à la Haute Ecole en Hainaut (HEH).\n    Il nous permet de nous familiariser avec les frameworks Angular et Spring.\n    Ce projet a aussi été développé en respectant la méthode SCRUM.\n  </p>\n  <h3>Contributeurs</h3>\n  <ul>\n    <li>Guillaume Isembaert</li>\n    <li>Thibault Stevanoni</li>\n    <li>Thomas Rosi</li>\n    <li>Arnaud Urbain</li>\n  </ul>\n</div>\n"
 
 /***/ }),
 
@@ -205,7 +205,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".body {\r\n  text-align: center;\r\n  color: #000000;\r\n}\r\n", ""]);
 
 // exports
 
@@ -218,7 +218,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  login works!\n</p>\n"
+module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <p>Login Works!</p>\n</div>\n"
 
 /***/ }),
 
