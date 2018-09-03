@@ -1,53 +1,44 @@
 package be.heh.DoggoCare.Model;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 @Entity
 @Table(name = "user")
 @XmlRootElement
-public class User implements UserDetails {
+public class User {
 
     @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name="increment", strategy = "increment")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
-    private String username;
+    private String firstName;
     @NotNull
     private String lastName;
     @NotNull
     private String mail;
     @NotNull
     private String password;
-    private boolean enabled;
 
     public User(){
 
     }
 
-    public User(@NotNull String username, @NotNull String lastName, @NotNull String mail, @NotNull String password) {
-        this.username = username;
+    public User(@NotNull String firstName, @NotNull String lastName, @NotNull String mail, @NotNull String password) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.mail = mail;
         this.password = password;
     }
 
-    @Override
-    public boolean isEnabled(){
-        return enabled;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -66,7 +57,6 @@ public class User implements UserDetails {
         this.mail = mail;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
@@ -74,36 +64,4 @@ public class User implements UserDetails {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        return authorities;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-
 }

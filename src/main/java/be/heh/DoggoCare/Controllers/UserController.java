@@ -28,7 +28,7 @@ public class UserController {
 
     @PostMapping(value = "/add")
     public User create(@RequestBody User user){
-        userRepositoy.save(new User(user.getUsername(), user.getLastName(), user.getMail(),
+        userRepositoy.save(new User(user.getFirstName(), user.getLastName(), user.getMail(),
                 user.getPassword()));
         return user;
     }
@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping(value = "/update/{id}")
     public User update(@RequestBody User user, @PathVariable Long id){
         User userToUpdate = userRepositoy.getOne(id);
-        userToUpdate.setUsername(user.getUsername());
+        userToUpdate.setFirstName(user.getFirstName());
         userToUpdate.setLastName(user.getLastName());
         userToUpdate.setMail(user.getMail());
         userToUpdate.setPassword(user.getPassword());
