@@ -37,5 +37,3 @@ dependencies {
 task buildAngular(type:Exec) {
 	commandLine '../startAngular.sh'
 }
-
-compileJava.dependsOn startAngular
