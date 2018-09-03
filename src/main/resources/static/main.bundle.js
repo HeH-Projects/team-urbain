@@ -46,7 +46,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <header>\n    <nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n      <a href=\"#\" class=\"navbar-brand\">{{title}}</a>\n      <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n          <a routerLink=\"/\" class=\"nav-item active nav-link\">Home</a>\n          <a routerLink=\"/login\" class=\"nav-item active nav-link\">Login</a>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <div class=\"body\">\n    <router-outlet></router-outlet>\n  </div>\n  <footer>\n    DoggoCare - Site créé dans le cadre du cours de Développement Web Avancé - BLOC 3 - Informatique et Système - HEH Mons\n  </footer>\n</div>\n\n\n\n"
+module.exports = "<div>\n  <header>\n    <nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n      <a href=\"#\" class=\"navbar-brand\">{{title}}</a>\n      <button type=\"button\" class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n          <a routerLink=\"/home\" class=\"nav-item active nav-link\">Home</a>\n          <a routerLink=\"/login\" class=\"nav-item active nav-link\">Login</a>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <div class=\"body\">\n    <router-outlet></router-outlet>\n  </div>\n  <footer>\n    DoggoCare - Site créé dans le cadre du cours de Développement Web Avancé - BLOC 3 - Informatique et Système - HEH Mons\n  </footer>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -92,12 +92,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -117,12 +119,13 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot([
-                    { path: '', redirectTo: '/home', pathMatch: 'full' },
                     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_3__home_home_component__["a" /* HomeComponent */] },
-                    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] }
+                    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] },
+                    { path: '', redirectTo: 'home', pathMatch: 'full' },
+                    { path: '**', redirectTo: 'home', pathMatch: 'full' }
                 ])
             ],
-            providers: [],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_6__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_6__angular_common__["d" /* HashLocationStrategy */] }],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -141,7 +144,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\r\n  color: #000000;\r\n  text-shadow: 0 0 4px #ffffff;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".body {\r\n  color: #ffffff;\r\n  text-shadow: 0 0 4px #000000;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -154,7 +157,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <h3>A propos</h3>\n  <p>\n    Ce projet a été créé dans le cadre du cours de développement Web avancé - Bloc 3 Informatique à la Haute Ecole en Hainaut (HEH).\n    Il nous permet de nous familiariser avec les frameworks Angular et Spring.\n    Ce projet a aussi été développé en respectant la méthode SCRUM.\n  </p>\n  <h3>Contributeurs</h3>\n  <ul>\n    <li>Guillaume Isembaert</li>\n    <li>Thibault Stevanoni</li>\n    <li>Thomas Rosi</li>\n    <li>Arnaud Urbain</li>\n  </ul>\n</div>\n"
+module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <h3>A propos</h3>\n  <p>\n    Ce projet a été créé dans le cadre du cours de développement Web avancé - Bloc 3 Informatique à la Haute Ecole en Hainaut (HEH).<br>\n    Il nous permet de nous familiariser avec les frameworks Angular et Spring.<br>\n    Ce projet a aussi été développé en respectant la méthode SCRUM.\n  </p>\n  <h3>Contributeurs</h3>\n  <ul>\n    <li>Guillaume Isembaert</li>\n    <li>Thibault Stevanoni</li>\n    <li>Thomas Rosi</li>\n    <li>Arnaud Urbain</li>\n  </ul>\n</div>\n"
 
 /***/ }),
 
@@ -202,7 +205,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\r\n  color: #000000;\r\n  text-shadow: 0 0 4px #ffffff;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n.box {\r\n    width: 500px;\r\n    margin: 200px 0;\r\n}\r\n\r\n.shape1{\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -50px;\r\n}\r\n.shape2 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n}\r\n.shape3 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n    margin-left: -31px;\r\n}\r\n.shape4 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -25px;\r\n    float: left;\r\n    margin-left: -32px;\r\n}\r\n.shape5 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -48px;\r\n    margin-left: -32px;\r\n    margin-top: -30px;\r\n}\r\n.shape6 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -35px;\r\n}\r\n.shape7 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -57px;\r\n}\r\n.float {\r\n    position: absolute;\r\n    z-index: 2;\r\n}\r\n\r\n.form {\r\n    margin-left: 145px;\r\n}\r\n", ""]);
+exports.push([module.i, ".body {\r\n  color: #ffffff;\r\n  text-shadow: 0 0 4px #000000;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n.box {\r\n    width: 500px;\r\n    margin: 200px 0;\r\n}\r\n\r\n.shape1{\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -50px;\r\n}\r\n.shape2 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n}\r\n.shape3 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n    margin-left: -31px;\r\n}\r\n.shape4 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -25px;\r\n    float: left;\r\n    margin-left: -32px;\r\n}\r\n.shape5 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -48px;\r\n    margin-left: -32px;\r\n    margin-top: -30px;\r\n}\r\n.shape6 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -35px;\r\n}\r\n.shape7 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -57px;\r\n}\r\n.float {\r\n    position: absolute;\r\n    z-index: 2;\r\n}\r\n\r\n.form {\r\n    margin-left: 145px;\r\n}\r\n", ""]);
 
 // exports
 
