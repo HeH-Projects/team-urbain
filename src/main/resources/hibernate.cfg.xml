@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://ec2-54-217-235-137.eu-west-1.compute.amazonaws.com:5432/daltu34m75qsug?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">zxuugesoghmzkg</property>
+        <property name="connection.password">2f4430ecb06519fd56848d987b6e57cbd83a9539e3bac04b68a4a12befc0084f</property>
+
+        <mapping class="be.heh.DoggoCare.Model.Appointment" />
+        <mapping class="be.heh.DoggoCare.Model.Care" />
+        <mapping class="be.heh.DoggoCare.Model.Customer" />
+        <mapping class="be.heh.DoggoCare.Model.Patient" />
+        <mapping class="be.heh.DoggoCare.Model.Room" />
+        <mapping class="be.heh.DoggoCare.Model.User" />
+        <mapping class="be.heh.DoggoCare.Model.Veterinarian" />
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
