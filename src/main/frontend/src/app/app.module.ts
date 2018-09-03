@@ -17,12 +17,9 @@ import { RouterModule, Routes } from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {
-      path: '', component: HomeComponent
-      },
-      {
-      path: 'login', component: LoginComponent
-      }
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponent }
     ])
   ],
   providers: [],

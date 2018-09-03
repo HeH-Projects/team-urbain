@@ -33,7 +33,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\r\n    background: url(" + escape(__webpack_require__("../../../../../../resources/images/background.jpg")) + ") no-repeat center fixed;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-size: cover;\r\n    color : #F5FBEF;\r\n    width: 100%;\r\n    min-height: 800px;\r\n}\r\n\r\nfooter {\r\n  padding: 10px;\r\n  text-align: center;\r\n  color : #ffffff;\r\n  border-bottom: solid;\r\n  border-bottom-color: #000000;\r\n  background-color: #343A40;\r\n}\r\n", ""]);
+exports.push([module.i, ".body {\r\n    background: url(" + escape(__webpack_require__("../../../../../../resources/images/background.jpg")) + ") no-repeat center fixed;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-size: cover;\r\n    color : #F5FBEF;\r\n    width: 100%;\r\n    min-height: 100vh;\r\n}\r\n\r\nfooter {\r\n  padding: 10px;\r\n  text-align: center;\r\n  color : #ffffff;\r\n  background-color: #343A40;\r\n}\r\n", ""]);
 
 // exports
 
@@ -117,12 +117,9 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* RouterModule */].forRoot([
-                    {
-                        path: '', component: __WEBPACK_IMPORTED_MODULE_3__home_home_component__["a" /* HomeComponent */]
-                    },
-                    {
-                        path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */]
-                    }
+                    { path: '', redirectTo: '/home', pathMatch: 'full' },
+                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_3__home_home_component__["a" /* HomeComponent */] },
+                    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */] }
                 ])
             ],
             providers: [],
@@ -205,7 +202,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body {\r\n  text-align: center;\r\n  color: #000000;\r\n}\r\n", ""]);
+exports.push([module.i, ".body {\r\n  color: #000000;\r\n  text-shadow: 0 0 4px #ffffff;\r\n  padding: 20px;\r\n  padding-left: 40px;\r\n}\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n\r\n.box {\r\n    width: 500px;\r\n    margin: 200px 0;\r\n}\r\n\r\n.shape1{\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -50px;\r\n}\r\n.shape2 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n}\r\n.shape3 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -30px;\r\n    float: left;\r\n    margin-left: -31px;\r\n}\r\n.shape4 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    margin-top: -25px;\r\n    float: left;\r\n    margin-left: -32px;\r\n}\r\n.shape5 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -48px;\r\n    margin-left: -32px;\r\n    margin-top: -30px;\r\n}\r\n.shape6 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -35px;\r\n}\r\n.shape7 {\r\n    position: relative;\r\n    height: 150px;\r\n    width: 150px;\r\n    background-color: #343A40;\r\n    border-radius: 80px;\r\n    float: left;\r\n    margin-right: -20px;\r\n    margin-top: -57px;\r\n}\r\n.float {\r\n    position: absolute;\r\n    z-index: 2;\r\n}\r\n\r\n.form {\r\n    margin-left: 145px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -218,7 +215,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <p>Login Works!</p>\n</div>\n"
+module.exports = "<div class=\"body\">\n  <h1>Bienvenue sur DoggoCare</h1>\n  <div class=\"container\">\n    <div id=\"login-row\" class=\"row justify-content-center align-items-center\">\n      <div id=\"login-column\" class=\"col-md-6\">\n        <div class=\"box\">\n          <div class=\"shape1\"></div>\n          <div class=\"shape2\"></div>\n          <div class=\"shape3\"></div>\n          <div class=\"shape4\"></div>\n          <div class=\"shape5\"></div>\n          <div class=\"shape6\"></div>\n          <div class=\"shape7\"></div>\n          <div class=\"float\">\n            <form class=\"form\" action=\"\">\n              <div class=\"form-group\">\n                <label for=\"username\" class=\"text-white\">Username:</label><br>\n                <input type=\"text\" name=\"username\" id=\"username\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <label for=\"password\" class=\"text-white\">Password:</label><br>\n                <input type=\"text\" name=\"password\" id=\"password\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <input type=\"submit\" name=\"submit\" class=\"btn btn-info btn-md\" value=\"submit\">\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
