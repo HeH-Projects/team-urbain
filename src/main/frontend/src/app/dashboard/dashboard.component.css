@@ -1,0 +1,10 @@
+.body {
+  color: #ffffff;
+  text-shadow: 0 0 4px #000000;
+  padding: 20px;
+  padding-left: 40px;
+}
+
+h1 {
+  text-align: center;
+}

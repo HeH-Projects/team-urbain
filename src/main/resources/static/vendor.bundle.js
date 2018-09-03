@@ -1452,21 +1452,6 @@ function flattenUnsubscriptionErrors(errors) {
 
 /***/ }),
 
-/***/ "../../../../rxjs/_esm5/add/operator/map.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__operator_map__ = __webpack_require__("../../../../rxjs/_esm5/operator/map.js");
-/** PURE_IMPORTS_START .._.._Observable,.._.._operator_map PURE_IMPORTS_END */
-
-
-__WEBPACK_IMPORTED_MODULE_0__Observable__["a" /* Observable */].prototype.map = __WEBPACK_IMPORTED_MODULE_1__operator_map__["a" /* map */];
-//# sourceMappingURL=map.js.map
-
-
-/***/ }),
-
 /***/ "../../../../rxjs/_esm5/observable/ArrayLikeObservable.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12951,13 +12936,13 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* Version */
 "use strict";
 /* unused harmony export HttpBackend */
 /* unused harmony export HttpHandler */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return HttpHeaders; });
+/* unused harmony export HttpClient */
+/* unused harmony export HttpHeaders */
 /* unused harmony export HTTP_INTERCEPTORS */
 /* unused harmony export JsonpClientBackend */
 /* unused harmony export JsonpInterceptor */
 /* unused harmony export HttpClientJsonpModule */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClientModule; });
 /* unused harmony export HttpClientXsrfModule */
 /* unused harmony export ɵinterceptingHandler */
 /* unused harmony export HttpParams */
