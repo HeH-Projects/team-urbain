@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "appointment")
 public class Appointment {
 
     @Id
